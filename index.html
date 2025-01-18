@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouzidi Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Bouzidi Player</h1>
+            <p class="tagline">Your Gateway to Seamless Streaming</p>
+            <button id="themeToggle" class="theme-icon">
+                <span class="light-icon">☀️</span>
+                <span class="dark-icon hidden">🌙</span>
+            </button>
+            <!-- زر القائمة المنسدلة -->
+            <button id="dropdownButton" class="dropdown-toggle">عرض الروابط</button>
+            <ul id="dropdownMenu" class="dropdown-menu"></ul>
+        </header>
+        <main class="app-main">
+            <video id="video" controls></video>
+            <div class="input-container">
+                <input type="text" id="urlInput" placeholder="أدخل رابط فيديو (M3U8, HLS, MP4, DASH)" />
+                <button id="playButton">تشغيل</button>
+            </div>
+            <p id="errorMessage" class="hidden">الرجاء إدخال رابط صالح.</p>
+        </main>
+        <footer class="app-footer">
+            <p>مشاهدة طيبة للجميع! نتمنى لكم تجربة ممتعة ومشاهدة مميزة.</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="script.js"></script>
+</body>
+</html>
